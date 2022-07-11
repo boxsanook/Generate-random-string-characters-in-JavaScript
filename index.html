@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:blue;">Generate-random-string-characters-in-JavaScript</h1>
+
+ 
+<p>Generate random:
+<select id="rang" name="rang">
+<option value="8">8</option>
+<option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+</select>
+<input id="mypassword" type="text" value="FakePSW" /> <button onclick="makeid()" >random</button></p>
+<script>
+function makeid() {
+var length= document.getElementById('rang').value ;
+var result = '';
+var characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var charactersLength = characters.length;
+for ( var i = 0; i < length; i++ ) {
+result += characters.charAt(Math.floor(Math.random() * charactersLength));
+}
+document.getElementById('mypassword').value =result;
+// return result;
+}
+</script>
+</body>
+</html>
+
